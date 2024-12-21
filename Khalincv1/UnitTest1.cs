@@ -59,7 +59,7 @@ public class AmazonTests
 
             //Записати назві книг та наявність позначки бестселлер
             int counter = await page.Locator("//div[@role='listitem']").CountAsync();
-            Console.WriteLine(counter.ToString());
+
             for (int i = 1; i <= counter; i++)
             {
                 string title = await page.Locator($"//div[@role='listitem'][{i}]//h2").InnerTextAsync();
